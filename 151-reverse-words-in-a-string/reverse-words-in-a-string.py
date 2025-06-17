@@ -1,12 +1,11 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        s = s.strip()
-        a = s.split()
+        s = s.strip().split()     # Method chaining
         left = 0
-        right = len (a) - 1
-        while left < right :
-            a[left], a[right] = a[right] ,a[left]
+        right = len (s) - 1
+        while left < right :      # Two pointer Approch
+            s[left], s[right] = s[right] ,s[left]
             left += 1
             right -= 1
-        return " " .join(a) 
+        return " " .join(s) 
 
