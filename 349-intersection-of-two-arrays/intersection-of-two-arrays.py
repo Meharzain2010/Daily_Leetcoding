@@ -5,8 +5,8 @@ class Solution:
         nums1 = set(nums1)  
         nums2 = set(nums2)  
 
-        for num in nums2:
-            if num in nums1:
+        for num in nums1:
+            if num in nums2:
                 answer.append(num)
                 
 
