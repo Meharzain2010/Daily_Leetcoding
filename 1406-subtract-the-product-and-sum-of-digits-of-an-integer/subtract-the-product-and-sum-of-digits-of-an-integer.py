@@ -6,10 +6,25 @@ class Solution:
             lst.append(a)
             n = n // 10
         
-        ans = prod(lst) - sum(lst)
-        return ans
+        return prod(lst) - sum(lst)
         
         
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+
+        sum = 0
+        product = 1
+
+        while n > 0:
+
+            digit = n % 10
+
+            sum += digit
+            product *= digit
+
+            n //= 10
+        
+        return product - sum    
         
         
         
