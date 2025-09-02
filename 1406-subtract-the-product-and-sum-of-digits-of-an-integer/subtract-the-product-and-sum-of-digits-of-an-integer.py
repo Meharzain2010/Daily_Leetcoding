@@ -7,8 +7,7 @@ class Solution:
             n = n // 10
         
         return prod(lst) - sum(lst)
-        
-        
+       
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
 
@@ -26,7 +25,7 @@ class Solution:
         
         return product - sum    
         
-        
+      
         
         
 
