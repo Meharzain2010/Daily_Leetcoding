@@ -24,16 +24,3 @@ class Solution:
         #                   [4,5,6], |  [2,5,8],
         #                   [7,8,9]] |  [3,6,9]]
                 
-        
-                
-                
-                
-                
-                
-        lst = [1,2,3,4,5,6,7]
-        i = 0
-        j = len(lst) - 1
-        while i < j:
-            lst[i], lst[j] = lst[j], lst[i]
-            i += 1
-            j -= 1
