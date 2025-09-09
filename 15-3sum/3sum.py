@@ -4,7 +4,7 @@ class Solution:
         nums.sort()
         for i in range(len(nums)-2):
             if i > 0 and nums[i] == nums[i-1]:
-                continue
+                continue   #  skip one interation and move back to loop
             l = i + 1
             r = len(nums) - 1
             while l < r:
