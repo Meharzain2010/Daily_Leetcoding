@@ -17,26 +17,31 @@ class Solution:
         Example 3:
         Input: nums = [1,3,5,6], target = 7
         Output: 4
-        """
+        """  
         
-                            # nums = [1,3,5,6], target = 2        
-        l = 0  
-        r = len(nums) - 1    
+                            # nums = [1,3,5,6], target = 7                            
+        l = 0   #1 -> 2 -> 3 -> 4
+        r = len(nums) - 1   #3
         
             
-        while l <= r:   
-            mid  = (l + r) // 2    
-            if nums[mid] == target:
+        while l <= r:   # 4 <= 3
+            mid  = (l + r) // 2    # 3
+            if nums[mid] == target: # 6 == 7 
                 return mid
-            elif nums[mid] < target:
+            elif nums[mid] < target: # 6 < 7
                 l = mid + 1
-            elif nums[mid] > target:
+            elif nums[mid] > target: #
                 r = mid - 1
         
         return l 
                     
         
-                
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        for i in range(len(nums)): #  # nums = [1,3,5,6], target = 2
+            if nums[i] >= target:
+                return i
+        return len(nums)
                 
                 
 
