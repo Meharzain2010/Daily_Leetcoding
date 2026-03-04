@@ -23,75 +23,48 @@
 #                     break
 #             return repeat
 
-        # # Create elements list once
-        # elements = []
-        # for nums in grid:
-        #     for num in nums:
-        #         elements.append(num)
+#         # Create elements list once
+#         elements = []
+#         for nums in grid:
+#             for num in nums:
+#                 elements.append(num)
 
-        # repeat = find_repeat(elements)
-        # missing = find_missing(grid)
+#         repeat = find_repeat(elements)
+#         missing = find_missing(grid)
 
-        # return [repeat, missing]
+#         return [repeat, missing]
 
                 
-# class Solution:
-#     def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:
-#         #[[9,1,7],
-#         # [8,9,2],
-#         # [3,4,6]]
-#         n = len(grid)
-#         N = n * n
-#         actualSum = 0
-#         actualSquareSum = 0
-        
-#         for i in range(n):
-#             for j in range(n):
-#                 num = grid[i][j]
-#                 actualSum += num
-#                 actualSquareSum += num * num
-                
-#         expectedSum = (N * (N+1)) // 2
-#         expectedSquareSum = (N * (N + 1)* (2*N + 1)) // 6
-        
-#         sumDifference = actualSum - expectedSum
-#         squareSumDifference = actualSquareSum - expectedSquareSum
-        
-#         sum_ab = squareSumDifference // sumDifference
-#         repeated = (sum_ab + sumDifference) // 2
-#         missing = (sum_ab - sumDifference) // 2
-        
-#         return [repeated, missing]
-        
-        
-        
-        
 class Solution:
-    def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:                     
-        #[9,1,7],
+    def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:
+        #[[9,1,7],
         # [8,9,2],
-        # [3,4,6]
-        #       ]
+        # [3,4,6]]
         n = len(grid)
-        N  = n * n
-        actual_sum = 0
-        actual_square_sum = 0
+        N = n * n
+        actualSum = 0
+        actualSquareSum = 0
         
         for i in range(n):
             for j in range(n):
-                value = grid[i][j]
-                actual_sum += value
-                actual_square_sum += value * value
+                num = grid[i][j]
+                actualSum += num
+                actualSquareSum += num * num
+                
+        expectedSum = (N * (N+1)) // 2
+        expectedSquareSum = (N * (N + 1)* (2*N + 1)) // 6
         
-        expected_sum  = (N * (N+1)) // 2
-        expected_square_sum  = (N * (N + 1) * (2*N + 1)) // 6
+        sumDifference = actualSum - expectedSum
+        squareSumDifference = actualSquareSum - expectedSquareSum
         
-        sum_difference = actual_sum - expected_sum
-        square_sum_difference = actual_square_sum - expected_square_sum
-        sum_ab = square_sum_difference // sum_difference
+        sum_ab = squareSumDifference // sumDifference
+        repeated = (sum_ab + sumDifference) // 2
+        missing = (sum_ab - sumDifference) // 2
         
-        repeat = ( sum_ab + sum_difference ) // 2
-        missing = ( sum_ab - sum_difference ) //2
-        return [repeat,missing]
+        return [repeated, missing]
+        
+        
+        
+
                 
                 
