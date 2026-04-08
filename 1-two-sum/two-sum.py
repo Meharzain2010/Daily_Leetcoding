@@ -10,5 +10,5 @@ class Solution:
 
         for i in range(len(nums)):
             need = target - nums[i]
-            if(need in d.keys() and d[need]!= i):
-                return(i,d[need])
+            if(need in d and d[need]!= i):
+                return[i,d[need]]
